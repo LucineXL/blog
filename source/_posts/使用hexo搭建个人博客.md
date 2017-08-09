@@ -27,7 +27,7 @@ node.js和git 命令行是辅助工具，但是是必不可少的。在安装hex
 ### hexo安装
 
 使用npm安装hexo，在终端中运行命令
-```
+```yml
 $ npm install -g hexo-cli
 ```
 
@@ -40,7 +40,7 @@ $ npm install -g hexo-cli
 ##### 2.本地创建仓库
 
 在本地创建一个文件夹，然后在终端打开这个文件后，执行命令
-```
+```yml
 $ hexo init
 ```
 
@@ -133,13 +133,13 @@ $ hexo init
 hexo的部署方式有多种，默认为git部署。因为我用的是git部署，所以在这里就介绍git部署的过程。
 
 ##### 安装 hexo-deployer-git 
-```
+```yml
 $ npm install hexo-deployer-git --save
 ```
 
 ##### 配置文件中deploy:
 
-```
+```yml
 deploy:
   type: git
   repo: <repository url> ## github上仓库地址 ##
@@ -149,7 +149,7 @@ deploy:
 
 ##### 部署到hexo
 
-```
+```yml
 $ hexo deploy
 ```
 
@@ -157,7 +157,7 @@ $ hexo deploy
 
 ### init
 
-```
+```yml
 $ hexo init [folder]
 ```
 
@@ -165,7 +165,7 @@ $ hexo init [folder]
 
 ### new
 
-```
+```yml
 $ hexo new [layout] <title>
 ```
 
@@ -173,7 +173,7 @@ $ hexo new [layout] <title>
 
 ### generate
 
-```
+```yml
 $ hexo generate
 ```
 
@@ -184,13 +184,13 @@ $ hexo generate
 -w, --watch	监视文件变动
 该命令可以简写为
 
-```
+```yml
 $ hexo g
 ```
 
 ### server
 
-```
+```yml
 $ hexo server
 ```
 启动服务器。默认情况下，访问网址为： http://localhost:4000/。
@@ -201,7 +201,7 @@ $ hexo server
 -l, --log	启动日记记录，使用覆盖记录格式
 ### deploy
 
-```
+```yml
 $ hexo deploy
 ```
 部署网站。
@@ -210,13 +210,13 @@ $ hexo deploy
 -g, --generate	部署之前预先生成静态文件
 该命令可以简写为：
 
-```
+```yml
 $ hexo d
 ```
 
 ### clean
 
-```
+```yml
 $ hexo clean
 ```
 
