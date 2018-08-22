@@ -4,6 +4,7 @@ title: 使用hexo搭建个人博客
 date: 2017-08-05 15:00:31
 conmments: true
 tags: hexo
+cover: https://images.pexels.com/photos/735839/pexels-photo-735839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 ---
 
 ![](https://photos.smugmug.com/Gallery/i-zCJTMv4/0/cc964767/M/littletree-M.jpg)

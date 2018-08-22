@@ -4,6 +4,7 @@ date: 2017-08-17 14:32:39
 tags: 
   - es6   
   - Promise
+cover: https://images.pexels.com/photos/17658/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 ---
 ![](https://photos.smugmug.com/Gallery/i-sqFcRg3/0/5b51c46d/M/Portland-Tree-M.jpg)
 

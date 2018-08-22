@@ -4,6 +4,7 @@ date: 2017-10-31 11:10:26
 tags:
   - React  
   - 生命周期函数
+cover: https://images.pexels.com/photos/1070945/pexels-photo-1070945.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 ---
 ---
 ![](https://o5wwk8baw.qnssl.com/d40ba0950637b6795eba91201dc47367/large)
@@ -14,7 +15,7 @@ tags:
 
 <!-- more -->
 
-[官方文档 戳这里][https://reactjs.org/docs/react-component.html] 
+[官方文档 戳这里~][1]
 
 react中的每个组件都有几个“生命周期函数”， 他们会在组件的运行过程中的特定时机触发。
 
@@ -103,3 +104,6 @@ componentWillUpdate()会在组件将要更新之前调用。
 ##### <a name='9'>componentWillUnmount()</a>
 
 在组件被卸载之前调用。可做一些清除操作。
+
+
+  [1]: https://reactjs.org/docs/react-component.html

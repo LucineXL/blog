@@ -2,6 +2,7 @@
 title: 浅析js中的 “==” 与 “===”
 date: 2017-09-12 18:21:34
 tags: javaScript
+cover: https://images.pexels.com/photos/930676/pexels-photo-930676.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 ---
 ![](https://photos.smugmug.com/Gallery/i-b4J5WR9/1/2dbd5746/M/Multnomah%20Falls%2040x30-M.jpg)
 

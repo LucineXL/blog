@@ -4,6 +4,7 @@ title: Immutable 常用API简介
 date: 2017-08-09 11:23:49
 conmments: true
 tags: Immutable
+cover: https://images.pexels.com/photos/356807/pexels-photo-356807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 ---
 
 ![Immutable](https://camo.githubusercontent.com/9e129aaf95d2a645a860dc26532796817e8085c0/687474703a2f2f696d672e616c6963646e2e636f6d2f7470732f69322f5442317a7a695f4b5858585858637458465858627262384f5658582d3631332d3537352e676966)

@@ -2,6 +2,7 @@
 title: es5 与 es6 中的 数组   （更新中。。。）
 date: 2017-09-07 11:39:22
 tags: Array
+cover: https://images.pexels.com/photos/1322350/pexels-photo-1322350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 ---
 ![](https://images.unsplash.com/photo-1496304841270-2cb66cf766b4?dpr=1&auto=format&fit=crop&w=600&h=400&q=80&cs=tinysrgb&crop=)
 
