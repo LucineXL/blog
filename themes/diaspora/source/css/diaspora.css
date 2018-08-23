@@ -301,7 +301,21 @@ pre .keyword,pre .javascript .function {color:#cc99cc;}
 #archive .post-archive .post-sub-title { display: flex; margin-top: 5px; align-items: center; font-size: 14px } 
 #archive .post-archive .post-tags-list { margin: 0 0 0 10px }
 #archive .post-archive .post-date { color: rgba(44,63,81,0.6) }
-#archive .post-archive a:link, a:visited { color: #333 }
-#archive .post-archive a:hover { color: #000 }
-#archive .post-archive a:active { color: #000 }
+#archive .post-archive .post-title a:link, a:visited { color: #333 }
+#archive .post-archive .post-title a:hover { color: #000 }
+#archive .post-archive .post-title a:active { color: #000 }
 /* 归档页 目录 end */
+
+/* tags start */
+#tags .title { display: flex; align-items: center; }
+#tags .subTitle { margin-left: 20px;color: rgba(44,63,81,0.6); font-size: 20px; }
+#tags #tag_cloud { padding: 30px 20px; border-bottom: 1px dashed rgba(44,63,81,0.1); margin-bottom: 80px; }
+#tags .tag-icon { margin: 0 0 10px 20px; }
+#tags .tag_item { display: inline-block;position: relative;background: rgba(102,128,153,0.075); border-radius: 0; padding: 2px 5px; margin-right: 20px; height: 20px; }
+#tags .tag_item:before { content: ' '; width: 0; height: 0; border: 12px solid transparent; border-right-color: rgba(102,128,153,0.075);border-right-color: rgba(102,128,153,0.075);
+  position: absolute;left: -24px;top: 0px; }
+#tags .main a:link, #tags .main a:visited { color: #333 }
+#tags .main a:hover, #tags .main a:active { color: #000 }
+#tags .one-tag-list { padding-bottom: 30px; }
+#tags .one-tag-list .post-preview {     margin-top: 10px; border-bottom: 1px dashed rgba(44,63,81,0.1); }
+/* tags end */
