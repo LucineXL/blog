@@ -311,7 +311,7 @@ pre .keyword,pre .javascript .function {color:#cc99cc;}
 #tags .subTitle { margin-left: 20px;color: rgba(44,63,81,0.6); font-size: 20px; }
 #tags #tag_cloud { padding: 30px 20px; border-bottom: 1px dashed rgba(44,63,81,0.1); margin-bottom: 80px; }
 #tags .tag-icon { margin: 0 0 10px 20px; }
-#tags .tag_item { display: inline-block;position: relative;background: rgba(102,128,153,0.075); border-radius: 0; padding: 2px 5px; margin-right: 20px; height: 20px; }
+#tags .tag_item { display: inline-block;position: relative;background: rgba(102,128,153,0.075); border-radius: 0; padding: 2px 5px; margin: 0 20px 10px 0; height: 20px; }
 #tags .tag_item:before { content: ' '; width: 0; height: 0; border: 12px solid transparent; border-right-color: rgba(102,128,153,0.075);border-right-color: rgba(102,128,153,0.075);
   position: absolute;left: -24px;top: 0px; }
 #tags .main a:link, #tags .main a:visited { color: #333 }
