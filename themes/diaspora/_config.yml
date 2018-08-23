@@ -1,8 +1,10 @@
 # 头部菜单，title: link
 menu:
-  # Whoami: /whoami
+  About: /about
   Github: https://github.com/LucineXL
-  # Twitter: https://twitter.com/FechinLi
+  Archives: /archives
+  tag: /tags
+
 
 # 是否显示目录
 TOC: false

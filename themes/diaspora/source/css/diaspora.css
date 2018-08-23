@@ -289,3 +289,19 @@ pre .keyword,pre .javascript .function {color:#cc99cc;}
   .comment .gt-btn-public .gt-btn-text:after{content:"";}
 }
 
+/* 归档页 目录 start */
+#archive .scrollbar, #archive .icon-play,
+#about-me .scrollbar, #about-me .icon-play,
+#tags .scrollbar, #tags .icon-play { display: none; }
+#archive .title { margin-left: 15px; }
+#archive .main { margin-bottom: 50px; }
+#archive .post-archive { margin-top: 20px; }
+#archive .post-archive .post-item {  padding: 15px; border-bottom: 1px dashed rgba(44,63,81,0.1); }
+#archive .post-archive .post-title { font-size: 20px }
+#archive .post-archive .post-sub-title { display: flex; margin-top: 5px; align-items: center; font-size: 14px } 
+#archive .post-archive .post-tags-list { margin: 0 0 0 10px }
+#archive .post-archive .post-date { color: rgba(44,63,81,0.6) }
+#archive .post-archive a:link, a:visited { color: #333 }
+#archive .post-archive a:hover { color: #000 }
+#archive .post-archive a:active { color: #000 }
+/* 归档页 目录 end */

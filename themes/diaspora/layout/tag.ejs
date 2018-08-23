@@ -1,1 +1,16 @@
-<%- partial('archive', {pagination: config.tag, index: true}) %>
+<div id="tags"">
+    <%- partial("_partial/post/header")%>
+    <div class="article">
+        <div class='main'>
+            <h1 class="title">tag</h1>
+            <% site.tags.sort("date", "desc").each(function (post) { %>
+                <li class="post-item">
+                  <div class="post-title">
+                    <a href="<%- url_for(post.path) %>"><%= post.name %></a>
+                  </div>
+                </li>
+              <% }) %>
+        </div>
+    </div> 
+    </div>
+    
