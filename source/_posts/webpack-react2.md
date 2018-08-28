@@ -39,8 +39,7 @@ webpack
 
 ```
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
 entry: {
     app: './src/index.js'
@@ -49,20 +48,14 @@ module: {
     rules: [
         {
             test: /\.js$/,
-            exclude: /node_modules/,
+            include: path.resolve(__dirname, '../src'),
             use: {
                 loader: "babel-loader"
             }
         }
     ]
 },
-plugins: [
-    new CleanWebpackPlugin(['dist']),
-    new HtmlWebpackPlugin({
-        template: "./src/index.html",
-        filename: "index.html"
-    }),
-],
+plugins: [],
 output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, '../dist')
@@ -77,17 +70,26 @@ const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer:{
-    contentBase:path.join(__dirname,"dist"),
+    contentBase:path.join(__dirname,"../src"),
     compress: true,
     port: 8033,
     hot: true,
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      inject: 'body',
+      minify: {
+          html5: true
+      },
+      hash: false
+    }),
     new webpack.HotModuleReplacementPlugin()
   ],
 });
@@ -99,9 +101,21 @@ module.exports = merge(common, {
 ```
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = merge(common, {
   mode: 'production',
+  plugins:[
+    new CleanWebpackPlugin(['../dist'], { allowExternal: true }),
+    new HtmlWebpackPlugin({
+        minify:{ //是对html文件进行压缩
+            removeAttributeQuotes: true  //removeAttrubuteQuotes是却掉属性的双引号。
+        },
+        hash:true, //为了开发中js有缓存效果，所以加入hash，这样可以有效避免缓存JS。
+        template:'./src/index.html' //是要打包的html模版路径和文件名称。
+    })
+  ],
 });
 ```
 
@@ -135,9 +149,15 @@ module.exports = {
 
 #### 2. 加载图片、字体
 
-安装 file-loader
+我们在写项目中引用路径的时候，填写的URL是基于我们开发时的路径， 但是在webpack打包时， 会将各个模块打包成一个文件，里面引用的路径是相对于入口html文件，并不是相对于我们的原始文件路径的。loader 会识别这是一个本地路径， 并将本地路径 替换为 输出 目录中图像的最终路径。 
 
-    yarn add file-loader -D
+file-loader 和 url-loader 都可以解决这个问题。 但是url-loader会将引入的图片进行编码， 我们引用的时候只需要引入这个文件就可以访问图片了， 可以大大减少 HTTP请求的次数。
+
+url-loader 封装了 file-loader， 但并不依赖他， 所以我们可以只需要安装 url-loader就可以了。
+
+安装 file-loader, url-loader 
+
+    yarn add file-loader url-loader -D
 
 webpack.config.js
 
@@ -151,7 +171,13 @@ module.exports = {
        {
             test: /\.(png|svg|jpg|gif)$/,
             use: [
-                'file-loader'
+                {
+                    loader: 'url-loader', //是指定使用的loader和loader的配置参数
+                    options: {
+                        limit:500,  //是把小于500B的文件打成Base64的格式，写入JS
+                        outputPath:'images/',  //打包后的图片放到images文件夹下
+                    }
+                }
             ]
         },
         // 加载字体文件
@@ -198,6 +224,63 @@ module.exports = {
 };
 ```
 
+## 压缩输出
+
+#### 1. 使用uglifyjs-webpack-plugin对打包后的文件进行压缩
+
+uglifyjs-webpack-plugin （js 压缩插件）， 在webpack中默认集成，不需要额外安装。
+
+webpack.prod.js
+
+```
+const uglify = require('uglifyjs-webpack-plugin');
+module.exports = {
+   // ...
+   plugins:[
+       // ...
+       new uglify()
+   ],
+}
+```
+
+## 关于 css
+#### 1. css 文件抽离
+
+在webpack4 版本中， 我们可以使用 mini-css-extract-plugin 插件， 将打包在js文件中的css抽离出来
+
+安装 mini-css-extract-plugin
+
+    yarn add mini-css-extract-plugin -D
+
+webpack.prod.conf.js
+```
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+module.exports = {
+    module: {
+        rules:
+            [
+                {
+                    test: /\.(css)$/,
+                    use: [
+                        MiniCssExtractPlugin.loader,
+                        {
+                            loader: 'css-loader',
+                        }
+                    ]
+                }
+            ]
+    },
+    plugins:[
+        // ...
+        new MiniCssExtractPlugin({
+            filename: 'css/[name].[hash].css',
+            chunkFilename: 'css/[id].[hash].css',
+        }),
+    ]
+}
+
+```
 
   [1]: https://lucinexl.github.io/2018/08/21/webpack-react/
   [2]: https://www.webpackjs.com/concepts/
