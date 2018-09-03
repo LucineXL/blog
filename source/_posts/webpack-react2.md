@@ -4,7 +4,7 @@ date: 2018-08-27 16:36:01
 tags:
     - React
     - webpack
-cover: https://www.pexels.com/photo/person-holding-black-android-smartphone-861126/
+cover: https://images.pexels.com/photos/735647/pexels-photo-735647.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 ---
 
   上一篇文章我们已经基本实现了一个简单的框架， 现在， 我们继续把我们的项目完善一下~
@@ -151,7 +151,7 @@ module.exports = {
 
 #### 2. 加载图片、字体
 
-我们在写项目中引用路径的时候，填写的URL是基于我们开发时的路径， 但是在webpack打包时， 会将各个模块打包成一个文件，里面引用的路径是相对于入口html文件，并不是相对于我们的原始文件路径的。loader 会识别这是一个本地路径， 并将本地路径 替换为 输出 目录中图像的最终路径。 
+我们在写项目中引用路径的时候，填写的URL是基于我们开发时的路径， 但是在webpack打包时， 会将各个模块打包成一个文件，里面引用的路径是相对于入口html文件，并不是相对于我们的原始文件路径的。loader 可以解析项目中引入的URL，并且根据配置，把图片拷贝到相应路径， 再将打包后的文件中的路径 替换为图像的最终路径。 
 
 file-loader 和 url-loader 都可以解决这个问题。 但是url-loader会将引入的图片进行编码， 我们引用的时候只需要引入这个文件就可以访问图片了， 可以大大减少 HTTP请求的次数。
 
