@@ -28,6 +28,8 @@ cover: https://images.pexels.com/photos/1352092/pexels-photo-1352092.jpeg?auto=c
 
   项目中可以使用 npm 和 yarn 安装依赖， 本项目中使用了yarn。
 
+  [项目地址][0]
+
   [webpack4 官方文档 ，请戳这里~][1]
 
   现在， 我们开始吧~
@@ -337,6 +339,7 @@ module.exports = {
  ```
 
 
+  [0]: https://github.com/LucineXL/webpackAndReact
   [1]: https://www.webpackjs.com/concepts/
   [2]: https://www.webpackjs.com/plugins/html-webpack-plugin/
   [3]: https://www.npmjs.com/package/clean-webpack-plugin

@@ -11,6 +11,8 @@ cover: https://www.pexels.com/photo/person-holding-black-android-smartphone-8611
 
   [上一篇：基于 webpack4 搭建 一个简单 的 React 脚手架 （一）][1]
 
+  [项目地址][0]
+
   [webpack4 官方文档 ，请戳这里~][2]
 
 
@@ -263,7 +265,12 @@ module.exports = {
                 {
                     test: /\.(css)$/,
                     use: [
-                        MiniCssExtractPlugin.loader,
+                        {
+                            loader: MiniCssExtractPlugin.loader,
+                            options: {
+                                publicPath: '../',
+                            }
+                        },
                         {
                             loader: 'css-loader',
                         }
@@ -282,5 +289,90 @@ module.exports = {
 
 ```
 
+#### 2. css 压缩
+
+使用 optimize-css-assets-webpack-plugin 插件来压缩 css
+
+    yarn add optimize-css-assets-webpack-plugin -D
+
+webpack.prod.js
+
+```
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+
+module.exports = {
+    // ...
+    plugins:[
+        // ...
+        new OptimizeCssAssetsPlugin({
+            assetNameRegExp:  /\.css\.*(?!.*map)/g,
+            cssProcessor: require('cssnano'),
+            cssProcessorPluginOptions: {
+            preset: ['default', { discardComments: { removeAll: true } }],
+            },
+            canPrint: true
+        }),
+    ]
+}
+```
+
+#### 3. less or sass
+
+
+安装 sass-loader/less-loader, 需注意若使用的是 sass, 还需要安装 node-sass;
+
+    yarn add node-sass sass-loader -D
+
+webpack.dev.js
+
+```
+module.exports = {
+    // ...
+    module: {
+        rules: [
+            // ...
+            {
+                test: /\.scss$/,
+                use: [
+                'style-loader',
+                'css-loader',
+                'sass-loader'
+                ]
+            },
+        ]
+    }
+}
+```
+
+webpack.prod.js
+
+```
+module.exports = {
+    // ...
+    module: {
+        rules: [
+            // ...
+             {
+                test: /\.(scss)$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                            publicPath: '../',
+                        }
+                    },
+                    {
+                        loader: 'css-loader',
+                    }, {
+                        loader: 'sass-loader',
+                    }
+                ]
+            }
+        ]
+    }
+}
+```
+
+  [0]: https://github.com/LucineXL/webpackAndReact
   [1]: https://lucinexl.github.io/2018/08/21/webpack-react/
   [2]: https://www.webpackjs.com/concepts/
