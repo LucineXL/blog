@@ -9,11 +9,11 @@ cover: https://images.pexels.com/photos/735647/pexels-photo-735647.jpeg?auto=com
 
   上一篇文章我们已经基本实现了一个简单的框架， 现在， 我们继续把我们的项目完善一下~
 
-  [上一篇：基于 webpack4 搭建 一个简单 的 React 脚手架 （一）][1]
+  [<font color=#518dca>上一篇：基于 webpack4 搭建 一个简单 的 React 脚手架 （一）</font>][1]
 
-  [项目地址][0]
+  [<font color=#518dca>项目git地址</font>][0]
 
-  [webpack4 官方文档 ，请戳这里~][2]
+  [<font color=#518dca>webpack4 官方文档 ，请戳这里~</font>][2]
 
 
 ## 生产环境构建

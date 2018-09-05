@@ -14,9 +14,9 @@ cover: https://images.pexels.com/photos/1352092/pexels-photo-1352092.jpeg?auto=c
 
 
 本文参考文章： 
- 1. [webpack4 官方文档][1]
- 2. [从零搭建 webpack4+react 脚手架][5]
- 3. [使用 webpack 定制前端开发环境][6]
+ 1. [<font color=#518dca>webpack4 官方文档</font>][1]
+ 2. [<font color=#518dca>从零搭建 webpack4+react 脚手架</font>][5]
+ 3. [<font color=#518dca>使用 webpack 定制前端开发环境</font>][6]
 
 
 
@@ -28,9 +28,9 @@ cover: https://images.pexels.com/photos/1352092/pexels-photo-1352092.jpeg?auto=c
 
   项目中可以使用 npm 和 yarn 安装依赖， 本项目中使用了yarn。
 
-  [项目地址][0]
+  [<font color=#518dca>项目git地址</font>][0]
 
-  [webpack4 官方文档 ，请戳这里~][1]
+  [<font color=#518dca>webpack4 官方文档 ，请戳这里~</font>][1]
 
   现在， 我们开始吧~
 
