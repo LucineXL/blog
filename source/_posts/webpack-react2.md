@@ -1,5 +1,5 @@
 ---
-title: 基于 webpack4 搭建 一个简单 的 React 脚手架 （二）
+title: 基于webpack4搭建一个简单的React脚手架 （二）
 date: 2018-08-27 16:36:01
 tags:
     - React
