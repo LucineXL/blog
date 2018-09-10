@@ -137,9 +137,43 @@ module.exports = {
 ```
 
 
+## 2.babel
+
+babel是一个广泛使用的转码器， 可以把我们项目中使用的 es6 代码转换为计算机可识别的 es5代码， 从而在现有环境执行。    可查看阮一峰的[Babel 入门教程][6]
+
+在Babel执行编译的过程中，会从项目的根目录下的 .babelrc文件中读取配置。.babelrc是一个json格式的文件。
+在.babelrc文件中， 我们可以对 presets（转码规则） 和 plugins（插件） 进行配置。
+
+我们需要转换 es6 的语法， 可以使用 babel-preset-es2015 插件.
+
+    yarn add babel-preset-es2015 -D
+
+.babelrc
+```
+{
+  "presets": ["es2015"] 
+}
+```
+
+但是， babel-preset-es2015 只能帮助我们把 es6 的语法 转译为 es5, 对于 es7甚至是es8 的语法并不能转译。因此， 出现了 babel-preset-env ， 他可以 根据 目标环境选择 不支持的新特性进行转译。
+
+  yarn add babel-preset-env -D
+
+.babelrc
+```
+{
+  "presets": ["env"],
+}
+```
+
+更多关于 babel-preset-env 的参数 请查看 [如何写好.babelrc？Babel的presets和plugins配置解析][7]
+
+
   [0]: https://github.com/LucineXL/webpackAndReact
   [1]: https://lucinexl.github.io/2018/08/21/webpack-react/
   [2]: https://lucinexl.github.io/2018/08/27/webpack-react2/
   [3]: https://www.webpackjs.com/concepts/
   [4]: https://www.tslang.cn/
   [5]: https://www.tslang.cn/docs/handbook/tsconfig-json.html
+  [6]: http://www.ruanyifeng.com/blog/2016/01/babel.html
+  [7]: https://excaliburhan.com/post/babel-preset-and-plugins.html
