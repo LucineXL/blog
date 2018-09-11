@@ -5,6 +5,7 @@ tags:
     - React
     - webpack
     - eslint
+cover: https://images.pexels.com/photos/1053769/pexels-photo-1053769.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 ---
 
 
@@ -20,6 +21,8 @@ tags:
     yarn add eslint eslint-loader -D
 
 在webpack中，通过 .eslintrc 文件 对 eslint 进行配置。在根目录下 执行 `touch .eslintrc` 在根目录下生成 .eslintrc 配置文件
+
+#### eslint-loader
 
 在 webpack.config.js 中 配置 eslint-loader.
 
@@ -38,8 +41,6 @@ module: {
     ]
 }
 ```
-
-#### eslint-loader
 
 我们的项目中之前已经使用了 babel-loader对我们的代码进行转译， 我们可以把 eslint-loader 和他一起使用。
 
@@ -121,6 +122,25 @@ module: {
 }
 
 ```
+
+#### eslint-config-airbnb
+
+我们在使用 eslint 的时候 可以使用别人配置好的 配置， 我们可以选用 Airbnb 标准。
+
+使用 Airbnb标准，还需要 两个 必须的 插件。
+
+yarn add eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-import -D
+
+
+.eslintrc
+
+```
+{
+    // ...
+    "extends": "airbnb",
+}
+```
+
 
 #### pre-commit
 
