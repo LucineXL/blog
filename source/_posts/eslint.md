@@ -96,6 +96,7 @@ module: {
     "no-console": "off",
     "no-alert": "off",
     "no-debugger": "off",
+    // ...
   }
 }
 ```
@@ -115,12 +116,56 @@ module: {
         "react",
     ],
     "rules": {
-        // ...
         "react/jsx-uses-react": "error",
         "react/prop-types": "error",
+         // ...
     }
 }
 
+```
+
+#### Environments 指定脚本的运行环境。
+
+ env: 指定脚本的运行环境。每种环境都有一组特定的预定义全局变量。
+
+```
+browser - 浏览器环境中的全局变量。
+node - Node.js 全局变量和 Node.js 作用域。
+commonjs - CommonJS 全局变量和 CommonJS 作用域 (用于 Browserify/WebPack 打包的只在浏览器中运行的代码)。
+shared-node-browser - Node.js 和 Browser 通用全局变量。
+es6 - 启用除了 modules 以外的所有 ECMAScript 6 特性（该选项会自动设置 ecmaVersion 解析器选项为 6）。
+worker - Web Workers 全局变量。
+amd - 将 require() 和 define() 定义为像 amd 一样的全局变量。
+```
+
+更多环境变量请参考 [官方文档][2]
+
+.eslintrc
+```
+{
+    // ...
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true,
+        "amd": true
+    },
+}
+```
+
+#### Globals - 脚本在执行期间访问的额外的全局变量。
+
+在配置文件里配置全局变量时，使用 globals 指出你要使用的全局变量。将变量设置为 true 将允许变量被重写，或 false 将不允许被重写。
+
+.eslintrc
+```
+{
+    // ...
+    "globals": {
+        "var1": true,
+        "var2": false,
+    }
+}
 ```
 
 #### eslint-config-airbnb
@@ -164,3 +209,4 @@ yarn add eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-import -D
 
  [0]: http://eslint.cn/docs/user-guide/getting-started
  [1]: http://eslint.cn/docs/rules/
+ [2]: http://eslint.cn/docs/user-guide/configuring
