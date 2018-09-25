@@ -168,6 +168,16 @@ babel是一个广泛使用的转码器， 可以把我们项目中使用的 es6 
 
 更多关于 babel-preset-env 的参数 请查看 [如何写好.babelrc？Babel的presets和plugins配置解析][7]
 
+需要注意的是， 在没有任何配置选项的情况下，babel-preset-env 与 babel-preset-latest（或者babel-preset-es2015，babel-preset-es2016和babel-preset-es2017一起）的行为完全相同。
+
+它不会包含 stage-x 插件。
+
+stage-x(stage-0/1/2/3/4)
+stage-x和上面的es2015等有些类似，但是它是按照JavaScript的提案阶段区分的，一共有5个阶段。而数字越小，阶段越靠后，存在依赖关系。也就是说stage-0是包括stage-1的，以此类推。
+
+之前遇到了一个问题， 在项目中使用的是 babel-preset-env， 但是使用箭头函数时 报错了， 重新安装了babel-preset-stage-0之后，就可以了。
+
+
 
   [0]: https://github.com/LucineXL/webpackAndReact
   [1]: https://lucinexl.github.io/2018/08/21/webpack-react/
