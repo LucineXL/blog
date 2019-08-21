@@ -7,10 +7,6 @@ tags: hexo
 cover: https://images.pexels.com/photos/735839/pexels-photo-735839.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 ---
 
-![](https://photos.smugmug.com/Gallery/i-zCJTMv4/0/cc964767/M/littletree-M.jpg)
-
-<br>
-
 本文介绍了使用hexo搭建个人博客的详细过程~
 
 <!-- more -->
@@ -61,7 +57,7 @@ $ hexo init
 
 ##### 1.网站信息
 
-| 参数 | 描述 | 
+| 参数 | 描述 |
 |:-----|:---:|
 |title| 网站标题 |
 |subtitle| 网站副标题|
@@ -133,7 +129,7 @@ $ hexo init
 
 hexo的部署方式有多种，默认为git部署。因为我用的是git部署，所以在这里就介绍git部署的过程。
 
-##### 安装 hexo-deployer-git 
+##### 安装 hexo-deployer-git
 ```yml
 $ npm install hexo-deployer-git --save
 ```

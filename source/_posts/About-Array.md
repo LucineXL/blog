@@ -4,9 +4,6 @@ date: 2017-09-07 11:39:22
 tags: Array
 cover: https://images.pexels.com/photos/1322350/pexels-photo-1322350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 ---
-![](https://images.unsplash.com/photo-1496304841270-2cb66cf766b4?dpr=1&auto=format&fit=crop&w=600&h=400&q=80&cs=tinysrgb&crop=)
-
-<br>
 
 JavaScript 中的数组是一种很常用的数据类型，有大量的api，在es6中又添加了一些，本文主要介绍了 es5 和 es6 中的Array 对象的大部分用法，便于记忆和查询。
 
@@ -105,7 +102,7 @@ join 方法也是用来将数组拼接成一个字符串，与toString 不同的
 
 ### 重排序方法
 
-#### reverse 
+#### reverse
 
 reverse 方法用来反转数组的顺序
 

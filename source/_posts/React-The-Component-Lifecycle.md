@@ -2,7 +2,7 @@
 title: 'React : 生命周期'
 date: 2017-10-31 11:10:26
 tags:
-  - React  
+  - React
   - 生命周期函数
 cover: https://images.pexels.com/photos/1070945/pexels-photo-1070945.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 ---
@@ -50,7 +50,7 @@ react的生命周期函数主要包括三种：  挂载、更新和 卸载。
 
 ##### <a name='3'>render()</a>
 
-返回类型包括以下几种类型： 
+返回类型包括以下几种类型：
   1. react节点
   2. num或者 string， 将会被渲染成文本节点
   3. null， 不做渲染

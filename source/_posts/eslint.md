@@ -65,7 +65,7 @@ module: {
 
     yarn add babel-eslint -D
 
-.eslintrc 
+.eslintrc
 
 ```
 {
@@ -105,7 +105,7 @@ module: {
 
 我们可以使用eslint-plugin-react 来检测 react 的一些语法规则
 
-    yarn add eslint-plugin-react -D 
+    yarn add eslint-plugin-react -D
 
 
 .eslintrc

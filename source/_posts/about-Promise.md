@@ -1,14 +1,11 @@
 ---
 title: 关于 Promise
 date: 2017-08-17 14:32:39
-tags: 
-  - es6   
+tags:
+  - es6
   - Promise
 cover: https://images.pexels.com/photos/17658/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 ---
-![](https://photos.smugmug.com/Gallery/i-sqFcRg3/0/5b51c46d/M/Portland-Tree-M.jpg)
-
-<br>
 
 本文介绍了对Promise的一些理解~
 
@@ -35,7 +32,7 @@ var p2 = new Promise(function(resolve,reject){
 ```
 p1 返回一个resolved状态，值为resolve的Promise对象
 ```
-Promise {[[PromiseStatus]]: "resolved", [[PromiseValue]]: "resolve"} 
+Promise {[[PromiseStatus]]: "resolved", [[PromiseValue]]: "resolve"}
 ```
 p2 返回一个rejected状态，值为reject的Promise对象
 ```
@@ -168,7 +165,7 @@ var p3 = new Promise(function(resolve,reject){
   resolve(3);
 });
 Promise.race([p1, p2, p3]).then(function (value) {
-    console.log(value); 
+    console.log(value);
 });
 ```
 运行结果：
@@ -216,7 +213,7 @@ var p4 = Promise.reject(Promise.reject('reject'))
 p1.then(
   function fulfilled(value){
     console.log('fulfilled1: ' + value);
-  }, 
+  },
   function rejected(err){
     console.log('rejected1: ' + err);
   }
@@ -225,7 +222,7 @@ p1.then(
 p2.then(
   function fulfilled(value){
     console.log('fulfilled2: ' + value);
-  }, 
+  },
   function rejected(err){
     console.log('rejected2: ' + err);
   }
@@ -234,7 +231,7 @@ p2.then(
 p3.then(
   function fulfilled(value){
     console.log('fulfilled3: ' + value);
-  }, 
+  },
   function rejected(err){
     console.log('rejected3: ' + err);
   }
@@ -243,7 +240,7 @@ p3.then(
 p4.then(
   function fulfilled(value){
     console.log('fulfilled4: ' + value);
-  }, 
+  },
   function rejected(err){
     console.log('rejected4: ' + err);
   }

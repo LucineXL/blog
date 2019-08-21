@@ -162,7 +162,7 @@ Immutable.fromJS([1,2,3,{a:4,b:5}]).hasIn([3,'b']) //true
 ```JavaScript
 Immutable.fromJS([1,2,3,{a:4,b:5}]).includes(2); //true
 Immutable.fromJS([1,2,3,{a:4,b:5}]).includes('2'); //false 不包含字符2
-Immutable.fromJS([1,2,3,{a:4,b:5}]).includes(5); //false 
+Immutable.fromJS([1,2,3,{a:4,b:5}]).includes(5); //false
 Immutable.fromJS([1,2,3,{a:4,b:5}]).includes({a:4,b:5}) //false
 Immutable.fromJS([1,2,3,{a:4,b:5}]).includes(Immutable.fromJS({a:4,b:5})) //true
 ```
@@ -313,7 +313,7 @@ List对应的数据结构是js中的数组，所以数组的一些方法在Immut
 
 代码实现：
 ```JavaScript
-List([ 0, 1, 2, 3, 4 ]).insert(6, 5) 
+List([ 0, 1, 2, 3, 4 ]).insert(6, 5)
 //List [ 0, 1, 2, 3, 4, 5 ]
 List([ 1, 2, 3, 4 ]).push(5)
 // List [ 1, 2, 3, 4, 5 ]
@@ -334,7 +334,7 @@ List中还有一个特有的方法用法设置List的长度，setSize()
 
 作用：浅合并，新数据与旧数据对比，旧数据中不存在的属性直接添加，就数据中已存在的属性用新数据中的覆盖
 
->mergrWith 
+>mergrWith
 
 作用：自定义浅合并，可自行设置某些属性的值
 
@@ -350,7 +350,7 @@ List中还有一个特有的方法用法设置List的长度，setSize()
 
 作用：对深层数据进行深合并
 
->mergrDeepWith 
+>mergrDeepWith
 
 作用:自定义深合并，可自行设置某些属性的值
 
@@ -528,7 +528,7 @@ Immutable.fromJS([1,2,3,4]).findLastIndex((value,index,array)=>{
 
 作用：查找满足条件的元素的value值
 
-用法： 
+用法：
 ```JavaScript
 Immutable.fromJS([1,2,3,4]).find((value,index,array)=>{
   return value%2 === 0;
@@ -543,7 +543,7 @@ Immutable.fromJS([1,2,3,4]).findLast((value,index,array)=>{
 
 作用：查找满足条件的元素的key值
 
-用法： 
+用法：
 ```JavaScript
 Immutable.fromJS([1,2,3,4]).findKey((value,index,array)=>{
   return value%2 === 0;
@@ -558,7 +558,7 @@ Immutable.fromJS([1,2,3,4]).findLastKey((value,index,array)=>{
 
 作用：查找满足条件的元素的键值对 key:value
 
-用法： 
+用法：
 ```JavaScript
 Immutable.fromJS([1,2,3,4]).findEntry((value,index,array)=>{
   return value%2 === 0;
@@ -700,11 +700,11 @@ Immutable.fromJS([1, 2, 3, 4]).skipUntil(list.takeUntil((value,index,list)=>{
 
 作用：和js中数组中的reduce相同,按索引升序的顺序处理元素
 
-用法： 
+用法：
 ```Javascript
 Immutable.fromJS([1,2,3,4]).reduce((pre,next,index,arr)=>{
   console.log(pre+next)
-  return pre+next; 
+  return pre+next;
 })
 // 3 6 10
 ```
@@ -713,11 +713,11 @@ Immutable.fromJS([1,2,3,4]).reduce((pre,next,index,arr)=>{
 
 作用：和js中数组中的reduce相同,按索引降序的顺序处理元素
 
-用法： 
+用法：
 ```Javascript
 Immutable.fromJS([1,2,3,4]).reduceRight((pre,next,index,arr)=>{
   console.log(pre+next)
-  return pre+next; 
+  return pre+next;
 })
 // 7 9 10
 ```
@@ -754,7 +754,7 @@ Immutable.fromJS([1,2,3,4]).some((value,index,arr)=>{
 
 作用：判断是否为空
 
-用法: 
+用法:
 ```JavaScript
 Immutable.fromJS([]).isEmpty(); // true
 Immutable.fromJS({}).isEmpty(); // true
