@@ -2,7 +2,7 @@
 title: 移动端适配问题 采坑记
 date: 2019-04-28 17:59:50
 tags: h5
-cover: https://images.unsplash.com/photo-1437652010333-fbf2cd02a4f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60
+cover: https://images.pexels.com/photos/2789165/pexels-photo-2789165.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500
 ---
 
 #### 此文用来整理记录 在移动端开发过程中遇到的一些适配问题， 会一直更新~
