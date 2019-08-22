@@ -2,7 +2,7 @@
 title: 搭建Flutter开发环境--pod setup安装慢解决办法
 date: 2019-08-22 16:50:27
 tags:
-    -flutter
+    - flutter
 cover: https://images.pexels.com/photos/1168742/pexels-photo-1168742.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500
 ---
 
