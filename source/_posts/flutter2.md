@@ -6,6 +6,11 @@ tags:
 cover: https://images.pexels.com/photos/2747050/pexels-photo-2747050.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500
 ---
 
+往期链接：
+
+- [从零开始学Flutter (1) 初识Flutter](https://lucinexl.github.io/2019/08/21/flutter1/)
+
+
 ### Flutter 开发环境搭建
 
 flutter官网上讲述了 windows， macos, linux 三种操作系统的搭建方法， 本篇文章只讲述 `macos` 的搭建过程， 其他系统配置请参考官网。
