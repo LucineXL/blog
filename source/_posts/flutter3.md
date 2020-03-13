@@ -3,6 +3,7 @@ title: 从零开始学Flutter (3) flutter 初体验
 date: 2019-09-05 17:35:28
 tags:
     - flutter
+cover: https://images.pexels.com/photos/2852438/pexels-photo-2852438.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500
 ---
 
 往期链接：
