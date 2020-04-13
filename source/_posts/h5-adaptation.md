@@ -1,7 +1,9 @@
 ---
 title: 移动端适配问题 采坑记
 date: 2019-04-28 17:59:50
-tags: h5
+tags:
+ - h5
+ - 移动端适配
 cover: https://images.pexels.com/photos/2789165/pexels-photo-2789165.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500
 ---
 
