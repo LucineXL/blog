@@ -19,24 +19,39 @@ cover: https://images.pexels.com/photos/2789165/pexels-photo-2789165.jpeg?auto=c
 2. 在使用 img标签渲染图片， ios图片不能正常显示， 安卓端可以正常显示
 
   效果如下:
-  ![](https://user-gold-cdn.xitu.io/2019/7/8/16bd0b40b5d8178e?w=422&h=234&f=png&s=8535)
+  <div align=center>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gdt3wfflh2j30og0ekgm5.jpg" width = "300" height = "300" div align=center />
 
   解决办法： 在使用img标签时， img标签外套一个div标签， 使用方式和css如下
-
-  ![](https://user-gold-cdn.xitu.io/2019/7/8/16bd0b659cb6d755?w=604&h=350&f=png&s=43368)
+  <div align=center>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gdt3x660f2j30xc0j843g.jpg" width = "300" height = "300" div align=center />
     css:
-
-  ![](https://user-gold-cdn.xitu.io/2019/7/8/16bd0b6ca56eb99b?w=562&h=462&f=png&s=44561)
+  <div align=center>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gdt3xs2xrbj30tc0pg79g.jpg" width = "300" height = "300" div align=center />
 
 
 3. img 元素下方有间隙
 
   效果如图： 图片与下方文字之间有间隙
-
-  ![](https://user-gold-cdn.xitu.io/2019/7/8/16bd0b7e3d0edbc3?w=338&h=224&f=png&s=23191)
+  <div align=center>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gdt3vh9lxoj30ka0e4763.jpg" width = "300" height = "300" div align=center />
 
   解决方式：
 
   1.将图片元素设置为块级元素， 即  {display: block}
 
   2.设置父元素 font-size 为0
+
+4. input 输入框收回后底部有留白
+
+效果如图：
+<div align=center>
+<img src="https://tva1.sinaimg.cn/large/007S8ZIlly1gdt3t5epy1j30iq104ack.jpg" width = "300" height = "300" div align=center />
+</div>
+
+解决办法：
+
+在输入框onblur之后手动触发页面的滚动
+```
+const onBlur = useCallback(() => window.scrollTo(0, 0), []);
+```
