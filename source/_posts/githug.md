@@ -410,7 +410,7 @@ Difficulty: **
 >This project has a remote repository.  Identify it.
 该项目具有远程存储库。 识别它。
 
-`git remove` 命令可以识别远程仓库
+`git remote` 命令可以识别远程仓库
 
 
 ### 25. remote_url
