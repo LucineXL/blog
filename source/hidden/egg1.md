@@ -24,6 +24,10 @@ docker ps
 docker stop 0d1a1f2eeb66
 
 
+docker ps -a 查看全部
+docker start [id]
+
+
 2. tabPlus  查看数据库
 
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1ge2ox244dsj30yk0padsp.jpg)
