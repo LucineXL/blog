@@ -5,7 +5,7 @@ tags:
     - React
     - Render Props
     - HOC
-cover: https://www.pexels.com/zh-cn/photo/3560451/
+cover: https://images.pexels.com/photos/666839/pexels-photo-666839.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500
 ---
 
 ### 需求背景

@@ -19,7 +19,10 @@ React中的数据传递是从根节点开始，一级一级的向下传递， �
 
     yarn add redux react-redux antd -D
 
-![](https://user-gold-cdn.xitu.io/2018/9/25/1660fbe3a026cb45?imageView2/0/w/1280/h/960/format/webp/ignore-error/1）
+
+如图：
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1ger3gp3awuj310a0huabo.jpg)
+
 
 ## 基础
 
@@ -28,7 +31,7 @@ React中的数据传递是从根节点开始，一级一级的向下传递， �
 redux 中的 store 是只读的。 要想修改 store中的值，只能通过触发 action 的方式来实现。
 action 本质是一个 js 对象， action 内使用 type 字段来表示 将要执行动作，可以在reducer中针对不同type执行相应的数据操作。
 
-##### action 创建函数 
+##### action 创建函数
 
 action 创建函数 是 生成一个 action的方法。
 
@@ -60,7 +63,7 @@ export function delTodo(index) {
 
 reducer 是一个纯函数， 接受 旧的 state 和 action， 最后返回修改后的新 state。
 
-注： 
+注：
     1. 不要直接修改 state。 更新state时， 可以采用 Object.assign({}, {...newState}) 的方式。
     2. 在 default 情况下返回旧的 state。遇到未知的 action 时，一定要返回旧的 state。
 
@@ -104,7 +107,7 @@ export default app;
 
 #### store
 
-store 就是我们当前项目的仓库， 我们可以在 store存储 我们项目中的用到的所有数据。 Redux 应用中只有一个单一的store。 如果需要对数据进行拆分， 可以把数据存储在多个reducer中， 然后使用 combineReducers() 将多个reducer 合并为一个。 
+store 就是我们当前项目的仓库， 我们可以在 store存储 我们项目中的用到的所有数据。 Redux 应用中只有一个单一的store。 如果需要对数据进行拆分， 可以把数据存储在多个reducer中， 然后使用 combineReducers() 将多个reducer 合并为一个。
 
 所有的容器组件都可以访问 Redux Store， 一种方式是以 props 的形式传入 容器组件中， 但这样使用比较麻烦。 react 中 我们可以使用 <Provider>, 这样 我们所有的容器组件都可以访问store，不需要通过 props 的方式进行传递。
 
@@ -330,7 +333,7 @@ class Footer extends Component {
             message.error('todo is require');
         }
     }
- 
+
     render() {
         const { inputValue } = this.state;
         return (
@@ -372,7 +375,7 @@ class Todo extends Component {
     delTodo = (index) => {
         this.props.delTodo(index);
     }
- 
+
     render() {
         const { list } = this.props;
 

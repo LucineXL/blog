@@ -18,7 +18,7 @@ cover: https://images.pexels.com/photos/17658/pexels-photo.jpg?auto=compress&cs=
   Promise对象代表一个异步操作，有三种状态：Pending（准备状态），Fulfilled（成功状态，也称为Resolved状态），Rejected（失败状态）。只有异步操作的结果可以决定promise对象的状态，操作成功后，promise对象由Pending状态转换为Fulfilled状态，此时回调函数会执行 onFulfilled方法。反之，操作失败，promise对象由pending状态转换为Rejected状态，此时回调函数会执行onRejected方法。
 如下图所示：
 
-![Promise状态改变](http://upload-images.jianshu.io/upload_images/5723572-dc13a58f2b636968.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Promise状态改变](https://tva1.sinaimg.cn/large/007S8ZIlly1ger3n5z1cjj311m0gcwkq.jpg)
 
 ######创建一个Promise对象
 
@@ -99,8 +99,7 @@ goodMain(function(){
 ```
 在这段代码中，badMain函数中传入onRejected参数，因为Promise.resolve(42)返回一个resolved状态的promise对象（这个api的用法会在下一节中说到），所以会去调用throwError函数，throwError函数中抛出的异常onRejected是捕获不到的，但是catch可以捕获到。
 
-
-![catch异常捕获](http://upload-images.jianshu.io/upload_images/5723572-badab42bb0ffc416.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![catch异常捕获](https://tva1.sinaimg.cn/large/007S8ZIlly1ger3nni0ywj311m0eawif.jpg)
 
 ######3.Promise.resolve
 这个方法会根据传进来的参数的不同，返回不同的promise对象。
@@ -249,16 +248,20 @@ p4.then(
 ```
 
 
-![p_1,p_2,p_3,p_4的值](http://upload-images.jianshu.io/upload_images/5723572-0edd1b3501b5b16a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![p_1,p_2,p_3,p_4的值](https://tva1.sinaimg.cn/large/007S8ZIlly1ger3kjsq2nj31jy0hcqbh.jpg)
 
 采用new Promise 方式创建对象和采用Promise.resolve方法创建出来的对象其实是一样的，可以把Promise.resolve看做new Promise 的语法糖。只不过需要注意的是，在上面介绍resolve方法的时候说过，如果传入的参数是一个promise对象，会直接返回这个对象，，所以`p_2===p_4`输出的是true,但是通过new的方式创建出来的对象都是新创建的，所以new出来的对象跟别的对象都不会全等，即`p_1===p_2`会输出false。
 
-![p1,p2,p3,p4的值](http://upload-images.jianshu.io/upload_images/5723572-981b4f40e4e8404d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![p1,p2,p3,p4的值](https://tva1.sinaimg.cn/large/007S8ZIlly1ger3l19h3zj30ua0u0ne0.jpg)
 
 两种方式定义的p1,p2,p3,p4都是相同的，从这段代码可以看出，不论是用那种方式创建promise对象，如果使用Promise.resolve方法传入一个新对象，还是会去‘读取’（可理解为）这个对象的，但是Promise.reject方法传入一个新对象，并不会去‘读取’这个对象，而会直接返回这个这个对象。（这个‘读取’的概念并不是promise中的概念，只是我的个人理解，在[八段代码彻底掌握 Promise](https://juejin.im/post/597724c26fb9a06bb75260e8) 这篇文章中，作者把他解释为‘拆箱’，也是作者的一种让人理解起来更简单的思路，至于promise官方文档中的规定，目前还没有去仔细深入研究，有时间会去看一下^-^）
 
-![new方式 回调执行结果](http://upload-images.jianshu.io/upload_images/5723572-5057fc1ae28d68e8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+new方式 回调执行结果
 
-![api方式 回调执行结果](http://upload-images.jianshu.io/upload_images/5723572-79cb1fe248a9eb45.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![new方式 回调执行结果](https://tva1.sinaimg.cn/large/007S8ZIlly1ger3o9lgrfj30rw07iadl.jpg)
+
+api方式 回调执行结果
+
+![api方式 回调执行结果](https://tva1.sinaimg.cn/large/007S8ZIlly1ger3on8uc9j310u0a8gri.jpg)
 
 从这段代码可以看出，两种方式的执行顺序会有差别，至于为什么，今天也查找了很多资料，但是并没有找到原因，有研究过的大神欢迎指导~~
