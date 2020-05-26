@@ -86,7 +86,8 @@ export PATH=~/flutter/flutter/bin:$PATH
 到此为止， flutter的安装工作就完成了， 但是还不具备开发环境，但是还不能进行开发。可以使用 `flutter -h`来检测一下。
 安装成功后， 出现下面的结果。
 
-![](https://user-gold-cdn.xitu.io/2019/8/22/16cb949ce43d8ab1?w=1228&h=1474&f=png&s=248072)
+
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1gf500cn5myj30u00zydx2.jpg)
 
 
 #### 安装Xcode
@@ -98,10 +99,10 @@ export PATH=~/flutter/flutter/bin:$PATH
 上面说到， 我们安装好了flutter， 但是还不具备开发环境， 因为我们在开发中还需要用到很多插件和软件， 具体需要的插件和软件可以通过 `flutter doctor` 命令来进行检查。
 
 运行结果如图：
-![](https://user-gold-cdn.xitu.io/2019/8/22/16cb95d1a7ed355e?w=1192&h=448&f=png&s=219960)
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1gf500tivqzj31tc0os7qo.jpg)
 这部分是安卓相关的， 当前先拿ios版本的试试手， 安卓相关的先暂且放一下，日后会继续更新~
 
-![](https://user-gold-cdn.xitu.io/2019/8/22/16cb95dab52b54b0?w=1212&h=938&f=png&s=410573)
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1gf501c0odnj312v0u04qp.jpg)
 
 大概意思就是我们还需要这些软件，请使用brew进行安装。
 整个安装过程没有任何技术含量， 但是无奈网速太渣渣， 这个过程耗了我半个多下午才搞定。

@@ -9,7 +9,7 @@ cover: https://images.pexels.com/photos/1168742/pexels-photo-1168742.jpeg?auto=c
 在搭建flutter开发环境的时候， 在运行 pod setup 的命令的时候，速度简直是慢的可怕，好不容易下载了50%， 结果还报错挂掉了， google之后找到了解决办法， 记录一下。
 
 
-![](https://user-gold-cdn.xitu.io/2019/8/22/16cb883989c51300?w=1206&h=342&f=png&s=166054)
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1gf502ox1axj31uo0is1a1.jpg)
 
 #### 解决办法
 
